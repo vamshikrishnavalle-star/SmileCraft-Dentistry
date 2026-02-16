@@ -1,0 +1,7 @@
+{
+  "name": "SmileCraft Aesthetic Dentistry | LB Nagar, Hyderabad",
+  "description": "Hyderabad's premier cosmetic dentistry clinic in LB Nagar. Specializing in veneers, Invisalign, and smile makeovers with international standards of care.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

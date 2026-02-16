@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmileCraft Aesthetic Dentistry | LB Nagar, Hyderabad</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --glow-blue: #003057;
+            --glow-accent: #E8F4F8;
+            --glow-dark: #1A1A1A;
+            --glow-gray: #666666;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            color: var(--glow-dark);
+            background-color: #FFFFFF;
+        }
+
+        .text-glow-blue { color: var(--glow-blue); }
+        .bg-glow-blue { background-color: var(--glow-blue); }
+        
+        /* High-end UI touches */
+        .rounded-glow { border-radius: 48px; }
+        .rounded-glow-small { border-radius: 24px; }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadeIn { animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+
+        @keyframes slideUpFade {
+            0% { opacity: 0; transform: translateY(15px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .animate-slideUpFade { animation: slideUpFade 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+
+        .btn-glow {
+            @apply flex items-center justify-center px-8 py-4 bg-glow-dark text-white rounded-full font-medium transition-all hover:bg-black;
+        }
+
+        /* Custom underline effect for active menu */
+        .nav-link {
+            position: relative;
+            @apply text-sm font-medium transition-colors hover:text-glow-blue;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--glow-blue);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Image hover reveal */
+        .reveal-container {
+            overflow: hidden;
+            @apply rounded-glow;
+        }
+        .reveal-container img {
+            transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-container:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom": "https://esm.sh/react-dom@^19.2.4",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.13.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/"
+  }
+}
+</script>
+</head>
+<body class="bg-white">
+    <div id="root"></div>
+</body>
+</html>
