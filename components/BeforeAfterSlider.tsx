@@ -1,5 +1,4 @@
-
-import React, { useState, useRef, useEffect } from 'react';
+import React from 'react';
 
 interface Props {
   before: string;
@@ -8,11 +7,11 @@ interface Props {
 }
 
 const BeforeAfterSlider: React.FC<Props> = ({ before, after, className = '' }) => {
-  const [position, setPosition] = useState(50);
-  const [containerWidth, setContainerWidth] = useState(0);
-  const containerRef = useRef<HTMLDivElement>(null);
+  const [position, setPosition] = React.useState(50);
+  const [containerWidth, setContainerWidth] = React.useState(0);
+  const containerRef = React.useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
+  React.useEffect(() => {
     const updateWidth = () => {
       if (containerRef.current) {
         setContainerWidth(containerRef.current.offsetWidth);
@@ -68,7 +67,7 @@ const BeforeAfterSlider: React.FC<Props> = ({ before, after, className = '' }) =
         style={{ left: `${position}%` }}
       >
         <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-2xl transform -translate-x-1/2 group-hover:scale-110 transition-transform border border-gray-100">
-          <svg className="w-6 h-6 text-medical-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-6 h-6 text-glow-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7l-4 4m0 0l4 4m-4-4h16m0 0l-4-4m4 4l-4 4" />
           </svg>
         </div>
@@ -76,12 +75,12 @@ const BeforeAfterSlider: React.FC<Props> = ({ before, after, className = '' }) =
 
       {/* Labels */}
       <div className="absolute bottom-6 left-6 z-30 opacity-0 group-hover:opacity-100 transition-opacity">
-        <span className="bg-white/90 backdrop-blur px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest text-charcoal shadow-sm">
+        <span className="bg-white/90 backdrop-blur px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest text-glow-blue shadow-sm">
           Before
         </span>
       </div>
       <div className="absolute bottom-6 right-6 z-30 opacity-0 group-hover:opacity-100 transition-opacity">
-        <span className="bg-white/90 backdrop-blur px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest text-charcoal shadow-sm">
+        <span className="bg-white/90 backdrop-blur px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest text-glow-blue shadow-sm">
           After
         </span>
       </div>

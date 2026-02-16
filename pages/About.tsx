@@ -1,12 +1,11 @@
-
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
 
 const Counter: React.FC<{ end: number; duration?: number; suffix?: string; decimals?: number }> = ({ end, duration = 2000, suffix = '', decimals = 0 }) => {
-  const [count, setCount] = useState(0);
-  const [hasStarted, setHasStarted] = useState(false);
-  const elementRef = useRef<HTMLSpanElement>(null);
+  const [count, setCount] = React.useState(0);
+  const [hasStarted, setHasStarted] = React.useState(false);
+  const elementRef = React.useRef<HTMLSpanElement>(null);
 
-  useEffect(() => {
+  React.useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !hasStarted) {
@@ -23,7 +22,7 @@ const Counter: React.FC<{ end: number; duration?: number; suffix?: string; decim
     return () => observer.disconnect();
   }, [hasStarted]);
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (!hasStarted) return;
 
     let startTimestamp: number | null = null;

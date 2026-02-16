@@ -1,15 +1,14 @@
-
 import React, { useEffect } from 'react';
 import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import Home from './pages/Home';
-import Gallery from './pages/Gallery';
-import Treatments from './pages/Treatments';
-import Pricing from './pages/Pricing';
-import About from './pages/About';
-import Book from './pages/Book';
-import WhatsAppWidget from './components/WhatsAppWidget';
+import Navbar from './components/Navbar.tsx';
+import Footer from './components/Footer.tsx';
+import Home from './pages/Home.tsx';
+import Gallery from './pages/Gallery.tsx';
+import Treatments from './pages/Treatments.tsx';
+import Pricing from './pages/Pricing.tsx';
+import About from './pages/About.tsx';
+import Book from './pages/Book.tsx';
+import WhatsAppWidget from './components/WhatsAppWidget.tsx';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
